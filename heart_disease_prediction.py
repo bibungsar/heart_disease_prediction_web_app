@@ -7,7 +7,7 @@ Created on Wed Apr 17 21:40:23 2024
 import numpy as np
 import pickle
 import streamlit as st
-from streamlit_option_menu import option_menu
+
 
 
 heart_disease_model = pickle.load(open('E:/Final Project/heart_disease_model.sav', 'rb'))
