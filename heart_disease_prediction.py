@@ -58,9 +58,19 @@ with col1:
     
 
 # Convert input data to numeric values
-input_data = np.array([float(age), float(sex), float(cp), float(trtbps), float(chol), float(fbs), 
-                       float(restecg), float(thalachh), float(exng), float(oldpeak), float(slp), 
-                       float(caa), float(thall)])
+input_data = np.array([float(age) if age else 0,    # Use 0 as default if age is empty
+                       float(sex) if sex else 0,    # Use 0 as default if sex is empty
+                       float(cp) if cp else 0,      # Use 0 as default if cp is empty
+                       float(trtbps) if trtbps else 0,  # Use 0 as default if trtbps is empty
+                       float(chol) if chol else 0,
+                       float(fbs) if fbs else 0,
+                       float(restecg) if restecg else 0,
+                       float(thalachh) if thalachh else 0,
+                       float(exng) if exng else 0,
+                       float(oldpeak) if oldpeak else 0,
+                       float(slp) if slp else 0,
+                       float(caa) if caa else 0,
+                       float(thall) if thall else 0])
 
 
 heart_disease_diagnosis = ''
